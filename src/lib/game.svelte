@@ -99,9 +99,29 @@
       }
     };
   });
+    async function runPythonScript() {
+      console.log("eee");
+        try {
+            const response = await fetch('http://127.0.0.1:5000/run-script', {
+                method: 'POST',
+            });
+
+            if (response.ok) {
+                const result = await response.json();
+                console.log('Script result:', result);
+            } else {
+                console.error('Error running script:', response.statusText);
+            }
+        } catch (error) {
+            console.error('Network error:', error);
+        }
+    }
+
+
 </script>
 
 <div id="phaser-game"></div>
+<button on:click={runPythonScript}>Run Python Script</button>
 
 <style>
   #phaser-game {
