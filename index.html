@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lancer le script Python</title>
+    <script>
+        async function runPythonScript() {
+            console.log("eee");
+            try {
+                const response = await fetch('http://104.22.78.190/run-script', {
+                    method: 'POST',
+                });
+
+                if (response.ok) {
+                    const result = await response.json();
+                    console.log('Script result:', result);
+                } else {
+                    console.error('Error running script:', response.statusText);
+                }
+            } catch (error) {
+                console.error('Network error:', error);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Lancer le script Python</h1>
+    <button onclick="runPythonScript()">Lancer le script</button>
+</body>
+</html>
