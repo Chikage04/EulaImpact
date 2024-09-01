@@ -19,7 +19,12 @@
     return [char1.name, char2.name].sort().join('|');
   }
 
-  // Fonction pour choisir une paire de personnages aléatoire qui n'a pas été utilisée
+  // Fonction pour vérifier si une paire est valide
+  function isValidPair(char1, char2) {
+    return Math.abs(char1.height_cm - char2.height_cm) >= 3 && Math.abs(char1.height_cm - char2.height_cm) !== 0;
+  }
+
+  // Fonction pour choisir une paire de personnages aléatoire qui n'a pas été utilisée et qui est valide
   function getUniqueRandomPair() {
     if (characters.length < 2) {
       console.error("Pas assez de personnages dans le fichier JSON pour créer des paires.");
@@ -32,13 +37,13 @@
     do {
       pair = getRandomPair();
       attempts++;
-    } while (usedPairs.has(generatePairKey(pair[0], pair[1])) && attempts < 100);
+    } while ((!isValidPair(pair[0], pair[1]) || usedPairs.has(generatePairKey(pair[0], pair[1]))) && attempts < 100);
 
     if (attempts < 100) {
       usedPairs.add(generatePairKey(pair[0], pair[1]));
       return pair;
     } else {
-      console.error("Impossible de trouver une paire unique après plusieurs tentatives.");
+      console.error("Impossible de trouver une paire valide et unique après plusieurs tentatives.");
       return [null, null];
     }
   }
@@ -108,7 +113,6 @@
     <button class="restart-btn" on:click={restartQuiz}>Recommencer le quiz</button>
   {/if}
 </main>
-
 <style>
   /* Style général du corps */
   body {
@@ -129,7 +133,7 @@
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     max-width: 500px;
-    text-align: center; 
+    text-align: center;
     position: absolute;
     left: 50%;
     top: 50%;
