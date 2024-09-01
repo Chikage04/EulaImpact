@@ -1,123 +1,183 @@
 <script>
-import { onMount } from 'svelte';
-let game;
-let Phaser;
+  import { onMount } from "svelte";
+  import charactersData from './characters.json';
 
-onMount(async () => {
-  Phaser = await import('phaser');
+  let score = 0;
+  let questionCount = 0;
+  let currentPair = [];
+  let gameOver = false;
 
-  // Variables de scène globales
-  let player;
-  let cursors;
-  let skyGroup;
-  let groundGroup;
+  // Récupère les personnages du fichier JSON
+  const characters = charactersData?.characters || [];
 
-  const config = {
-    type: Phaser.AUTO,
-    width: window.innerWidth,
-    height: window.innerHeight,
-    physics: {
-      default: 'arcade',
-      arcade: {
-        gravity: { y: 1500 }, // La gravité pousse les objets vers le bas
-        debug: false
-      }
-    },
-    scene: {
-      preload,
-      create,
-      update
-    },
-    scale: {
-      mode: Phaser.Scale.RESIZE, // Ajuste automatiquement la taille du jeu
-      autoCenter: Phaser.Scale.CENTER_BOTH
-    }
-  };
-
-  game = new Phaser.Game(config);
-function preload() {
-    this.load.image('sky', 'https://media.discordapp.net/attachments/980876597987004446/1265359022748467261/image.png?ex=66a138ec&is=669fe76c&hm=c2537cbca43545b3918bc10fe0c3ff0c63b8869957b9e20b0b489aec9a0c6082&=&format=webp&quality=lossless&width=653&height=643');
-    this.load.image('ground', 'https://media.discordapp.net/attachments/980876597987004446/1265319390388424754/Chalk_crookedbullet.png?ex=66a11403&is=669fc283&hm=706f9cf73f67a1229405c4ac738c1c55ce7f60abfc8c50074195823a40a2f4dc&=&format=webp&quality=lossless&width=905&height=905');
-    this.load.image('dude', 'https://media.discordapp.net/attachments/980876597987004446/1265271316228079689/jack_head.png?ex=66a18ffd&is=66a03e7d&hm=cc7937218e8440885385e4f5a0603839acf73313e1a2cbd1a496a4a57580803a&=&format=webp&quality=lossless&width=905&height=905');
+  // Vérifie si le tableau `characters` est bien rempli
+  if (characters.length < 2) {
+    console.error("Pas assez de personnages dans le fichier JSON pour créer des paires.");
   }
 
-  function create() {
-    // Create groups for the sky and ground tiles
-    skyGroup = this.add.group();
-    groundGroup = this.physics.add.staticGroup();
-
-    // Add multiple instances of the sky and ground tiles to the groups
-    for (let i = 0; i < 30; i++) {
-      const sky = this.add.image(i * this.sys.game.config.width, 0, 'sky');
-      sky.setOrigin(0, 0);
-      sky.setDisplaySize(this.sys.game.config.width, this.sys.game.config.height);
-      skyGroup.add(sky);
-
-      const ground = groundGroup.create(i * 1700, this.sys.game.config.height/2, 'ground').setOrigin(0, 0).setScale(2).refreshBody();
-      ground.setDisplaySize(1700, this.sys.game.config.height/2);
-    }
-
-    player = this.physics.add.sprite(100, this.sys.game.config.height - 1650, 'dude');
-    player.setBounce(0.3);
-    player.setCollideWorldBounds(false);
-    player.setScale(0.4);
-    player.body.setSize(32, 48, true);
-
-    this.physics.add.collider(player, groundGroup);
-
-    cursors = this.input.keyboard.createCursorKeys();
-
-    // Set up the camera to follow the player
-    this.cameras.main.startFollow(player);
-    this.cameras.main.setBounds(0, 0, Number.MAX_SAFE_INTEGER, this.sys.game.config.height);
+  // Fonction pour choisir deux personnages aléatoires
+  function getRandomPair() {
+    const shuffled = characters.sort(() => 0.5 - Math.random());
+    return [shuffled[0], shuffled[1]];
   }
 
-  function update() {
-    if (!player || !cursors) return;
+  // Initialiser la première paire de personnages
+  onMount(() => {
+    currentPair = getRandomPair();
+  });
 
-    // Déplacement horizontal
-    if (cursors.left.isDown) {
-      player.setVelocityX(-1000);
-    } else if (cursors.right.isDown) {
-      player.setVelocityX(1000); // Réduisez la vitesse à 160 pour voir si cela résout le problème
+  // Fonction appelée lorsqu'un choix est fait
+  function handleChoice(choice) {
+    if (currentPair.length < 2) {
+      console.error("currentPair ne contient pas assez de personnages.");
+      return;
+    }
+
+    const [char1, char2] = currentPair;
+    const correct = char1.height_cm > char2.height_cm ? char1.name : char2.name;
+
+    if (choice === correct) {
+      score++;
+    }
+
+    questionCount++;
+    if (questionCount >= 10) {
+      gameOver = true;
     } else {
-      player.setVelocityX(0);
+      currentPair = getRandomPair();
     }
-
-    // Saut
-    if (cursors.up.isDown && player.body.touching.down) {
-      player.setVelocityY(-830);
-    }
-
-    // Debugging: Afficher la position du joueur
-    console.log(`Player position: x=${player.x}, y=${player.y}`);
-
-    // Update the position of the sky and ground tiles based on the player's position
-    const tileWidth = 1900;
-    const playerTileX = Math.floor(player.x / tileWidth);
-
-    skyGroup.getChildren().forEach((sky) => {
-      const skyTileX = Math.floor(sky.x / tileWidth);
-      if (skyTileX < playerTileX - 1) {
-        sky.x += tileWidth * 1;
-      }
-    });
-
-    groundGroup.getChildren().forEach((ground) => {
-      const groundTileX = Math.floor(ground.x / tileWidth);
-      if (groundTileX < playerTileX - 1) {
-        ground.x += tileWidth * 1;
-      }
-    });
   }
-});
+
+  // Redémarrer le quiz
+  function restartQuiz() {
+    score = 0;
+    questionCount = 0;
+    gameOver = false;
+    currentPair = getRandomPair();
+  }
 </script>
 
+<main>
+  <h1>Qui est le plus grand ?</h1>
+  {#if !gameOver}
+    <p>Score: {score}</p>
+    {#if currentPair.length >= 2}
+      <div class="question">
+        <p>Qui est le plus grand entre {currentPair[0].name} et {currentPair[1].name} ?</p>
+        <button on:click={() => handleChoice(currentPair[0].name)}>
+          {currentPair[0].name}
+        </button>
+        <button on:click={() => handleChoice(currentPair[1].name)}>
+          {currentPair[1].name}
+        </button>
+      </div>
+    {:else}
+      <p>Erreur : Les données des personnages sont manquantes ou incorrectes.</p>
+    {/if}
+  {:else}
+    <p>Votre score final est de {score} sur 10.</p>
+    <button on:click={restartQuiz}>Recommencer le quiz</button>
+  {/if}
+</main>
 
 <style>
-canvas {
-  display: block;
-  margin: auto;
-  background: #000;
-}
+  /* Style général du corps */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+  }
+
+  main {
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #1e3a8a;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #4a5568;
+  }
+
+  .question {
+    margin: 30px 0;
+  }
+
+  button {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 15px 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin: 10px 5px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  button:active {
+    transform: translateY(1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  .score {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 25px;
+  }
+
+  .game-over {
+    font-size: 1.8rem;
+    color: #e53e3e;
+    margin-bottom: 20px;
+  }
+
+  .restart-btn {
+    background: linear-gradient(135deg, #ff6f61, #de4313);
+    color: white;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+
+  .restart-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .restart-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  }
 </style>
