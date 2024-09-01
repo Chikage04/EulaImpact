@@ -6,7 +6,7 @@
   let questionCount = 0;
   let currentPair = [];
   let gameOver = false;
-  let scoreMax = 10;
+  let scoreMax = 50;
 
   // Récupère les personnages du fichier JSON
   const characters = charactersData?.characters || [];
@@ -89,8 +89,8 @@
 <main>
   <h1>Qui est le plus grand ?</h1>
   {#if !gameOver}
-  <p class="score">Score: {score} / {scoreMax}</p>
-  {#if currentPair[0] && currentPair[1]}
+    <p class="score">Score: {score} / {scoreMax}</p>
+    {#if currentPair[0] && currentPair[1]}
       <div class="question">
         <p>Qui est le plus grand entre {currentPair[0].name} et {currentPair[1].name} ?</p>
         <button on:click={() => handleChoice(currentPair[0].name)}>
