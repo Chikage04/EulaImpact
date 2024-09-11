@@ -1,0 +1,310 @@
+[
+    {
+        "name": "Conan Edogawa",
+        "image_url": "src/lib/images/Conan_Edogawa.jpg"
+    },
+    {
+        "name": "Ran Mouri",
+        "image_url": "src/lib/images/Ran_Mouri.jpg"
+    },
+    {
+        "name": "Kogoro Mouri",
+        "image_url": "src/lib/images/Kogoro_Mouri.jpg"
+    },
+    {
+        "name": "Ayumi Yoshida",
+        "image_url": "src/lib/images/Ayumi_Yoshida.jpg"
+    },
+    {
+        "name": "Mitsuhiko Tsuburaya",
+        "image_url": "src/lib/images/Mitsuhiko_Tsuburaya.jpg"
+    },
+    {
+        "name": "Genta Kojima",
+        "image_url": "src/lib/images/Genta_Kojima.jpg"
+    },
+    {
+        "name": "Ai Haibara",
+        "image_url": "src/lib/images/Ai_Haibara.jpg"
+    },
+    {
+        "name": "Hiroshi Agasa",
+        "image_url": "src/lib/images/Hiroshi_Agasa.jpg"
+    },
+    {
+        "name": "Sonoko Suzuki",
+        "image_url": "src/lib/images/Sonoko_Suzuki.jpg"
+    },
+    {
+        "name": "Eri Kisaki",
+        "image_url": "src/lib/images/Eri_Kisaki.jpg"
+    },
+    {
+        "name": "Yusaku Kudo",
+        "image_url": "src/lib/images/Yusaku_Kudo.jpg"
+    },
+    {
+        "name": "Yukiko Kudo",
+        "image_url": "src/lib/images/Yukiko_Kudo.jpg"
+    },
+    {
+        "name": "Heiji Hattori",
+        "image_url": "src/lib/images/Heiji_Hattori.jpg"
+    },
+    {
+        "name": "Kazuha Toyama",
+        "image_url": "src/lib/images/Kazuha_Toyama.jpg"
+    },
+    {
+        "name": "Yoko Okino",
+        "image_url": "src/lib/images/Yoko_Okino.jpg"
+    },
+    {
+        "name": "Sumiko Kobayashi",
+        "image_url": "src/lib/images/Sumiko_Kobayashi.jpg"
+    },
+    {
+        "name": "Tomoaki Araide",
+        "image_url": "src/lib/images/Tomoaki_Araide.jpg"
+    },
+    {
+        "name": "Makoto Kyogoku",
+        "image_url": "src/lib/images/Makoto_Kyogoku.jpg"
+    },
+    {
+        "name": "Shizuka Hattori",
+        "image_url": "src/lib/images/Shizuka_Hattori.jpg"
+    },
+    {
+        "name": "Jirokichi Suzuki",
+        "image_url": "src/lib/images/Jirokichi_Suzuki.jpg"
+    },
+    {
+        "name": "Eisuke Hondou",
+        "image_url": "src/lib/images/Eisuke_Hondou.jpg"
+    },
+    {
+        "name": "Azusa Enomoto",
+        "image_url": "src/lib/images/Azusa_Enomoto.jpg"
+    },
+    {
+        "name": "Subaru Okiya",
+        "image_url": "src/lib/images/Subaru_Okiya.jpg"
+    },
+    {
+        "name": "Masumi Sera",
+        "image_url": "src/lib/images/Masumi_Sera.jpg"
+    },
+    {
+        "name": "Shukichi Haneda",
+        "image_url": "src/lib/images/Shukichi_Haneda.jpg"
+    },
+    {
+        "name": "Sakurako Yonehara",
+        "image_url": "src/lib/images/Sakurako_Yonehara.jpg"
+    },
+    {
+        "name": "Juzo Megure",
+        "image_url": "src/lib/images/Juzo_Megure.jpg"
+    },
+    {
+        "name": "Wataru Takagi",
+        "image_url": "src/lib/images/Wataru_Takagi.jpg"
+    },
+    {
+        "name": "Miwako Sato",
+        "image_url": "src/lib/images/Miwako_Sato.jpg"
+    },
+    {
+        "name": "Ninzaburo Shiratori",
+        "image_url": "src/lib/images/Ninzaburo_Shiratori.jpg"
+    },
+    {
+        "name": "Yumi Miyamoto",
+        "image_url": "src/lib/images/Yumi_Miyamoto.jpg"
+    },
+    {
+        "name": "Kazunobu Chiba",
+        "image_url": "src/lib/images/Kazunobu_Chiba.jpg"
+    },
+    {
+        "name": "Naeko Miike",
+        "image_url": "src/lib/images/Naeko_Miike.jpg"
+    },
+    {
+        "name": "Kiyonaga Matsumoto",
+        "image_url": "src/lib/images/Kiyonaga_Matsumoto.jpg"
+    },
+    {
+        "name": "Inspector Yuminaga",
+        "image_url": "src/lib/images/Inspector_Yuminaga.jpg"
+    },
+    {
+        "name": "Shintaro Chaki",
+        "image_url": "src/lib/images/Shintaro_Chaki.jpg"
+    },
+    {
+        "name": "Hyoue Kuroda",
+        "image_url": "src/lib/images/Hyoue_Kuroda.jpg"
+    },
+    {
+        "name": "Heizo Hattori",
+        "image_url": "src/lib/images/Heizo_Hattori.jpg"
+    },
+    {
+        "name": "Ginshiro Toyama",
+        "image_url": "src/lib/images/Ginshiro_Toyama.jpg"
+    },
+    {
+        "name": "Goro Otaki",
+        "image_url": "src/lib/images/Goro_Otaki.jpg"
+    },
+    {
+        "name": "Kansuke Yamato",
+        "image_url": "src/lib/images/Kansuke_Yamato.jpg"
+    },
+    {
+        "name": "Yui Uehara",
+        "image_url": "src/lib/images/Yui_Uehara.jpg"
+    },
+    {
+        "name": "Sango Yokomizo",
+        "image_url": "src/lib/images/Sango_Yokomizo.jpg"
+    },
+    {
+        "name": "Misao Yamamura",
+        "image_url": "src/lib/images/Misao_Yamamura.jpg"
+    },
+    {
+        "name": "Jugo Yokomizo",
+        "image_url": "src/lib/images/Jugo_Yokomizo.jpg"
+    },
+    {
+        "name": "Shuichi Akai",
+        "image_url": "src/lib/images/Shuichi_Akai.jpg"
+    },
+    {
+        "name": "James Black",
+        "image_url": "src/lib/images/James_Black.jpg"
+    },
+    {
+        "name": "Andre Camel",
+        "image_url": "src/lib/images/Andre_Camel.jpg"
+    },
+    {
+        "name": "Ethan Hondou",
+        "image_url": "src/lib/images/Ethan_Hondou.jpg"
+    },
+    {
+        "name": "Gin",
+        "image_url": "src/lib/images/Gin.jpg"
+    },
+    {
+        "name": "Vodka",
+        "image_url": "src/lib/images/Vodka.jpg"
+    },
+    {
+        "name": "Vermouth",
+        "image_url": "src/lib/images/Vermouth.jpg"
+    },
+    {
+        "name": "Chianti",
+        "image_url": "src/lib/images/Chianti.jpg"
+    },
+    {
+        "name": "Korn",
+        "image_url": "src/lib/images/Korn.jpg"
+    },
+    {
+        "name": "Rum",
+        "image_url": "src/lib/images/Rum.jpg"
+    },
+    {
+        "name": "Scotch",
+        "image_url": "src/lib/images/Scotch.jpg"
+    },
+    {
+        "name": "Akemi Miyano",
+        "image_url": "src/lib/images/Akemi_Miyano.jpg"
+    },
+    {
+        "name": "Elena Miyano",
+        "image_url": "src/lib/images/Elena_Miyano.jpg"
+    },
+    {
+        "name": "Atsushi Miyano",
+        "image_url": "src/lib/images/Atsushi_Miyano.jpg"
+    },
+    {
+        "name": "Tequila",
+        "image_url": "src/lib/images/Tequila.jpg"
+    },
+    {
+        "name": "Pisco",
+        "image_url": "src/lib/images/Pisco.jpg"
+    },
+    {
+        "name": "Calvados",
+        "image_url": "src/lib/images/Calvados.jpg"
+    },
+    {
+        "name": "Rikumichi Kusuda",
+        "image_url": "src/lib/images/Rikumichi_Kusuda.jpg"
+    },
+    {
+        "name": "Ki'ichiro Numabuchi",
+        "image_url": "src/lib/images/Ki'ichiro_Numabuchi.jpg"
+    },
+    {
+        "name": "Kaito Kuroba",
+        "image_url": "src/lib/images/Kaito_Kuroba.jpg"
+    },
+    {
+        "name": "Kaitou Kid",
+        "image_url": "src/lib/images/Kaitou_Kid.jpg"
+    },
+    {
+        "name": "Aoko Nakamori",
+        "image_url": "src/lib/images/Aoko_Nakamori.jpg"
+    },
+    {
+        "name": "Ginzo Nakamori",
+        "image_url": "src/lib/images/Ginzo_Nakamori.jpg"
+    },
+    {
+        "name": "Toichi Kuroba",
+        "image_url": "src/lib/images/Toichi_Kuroba.jpg"
+    },
+    {
+        "name": "Chikage Kuroba",
+        "image_url": "src/lib/images/Chikage_Kuroba.jpg"
+    },
+    {
+        "name": "Konosuke Jii",
+        "image_url": "src/lib/images/Konosuke_Jii.jpg"
+    },
+    {
+        "name": "Akako Koizumi",
+        "image_url": "src/lib/images/Akako_Koizumi.jpg"
+    },
+    {
+        "name": "Saguru Hakuba",
+        "image_url": "src/lib/images/Saguru_Hakuba.jpg"
+    },
+    {
+        "name": "Snake",
+        "image_url": "src/lib/images/Snake.jpg"
+    },
+    {
+        "name": "Spider",
+        "image_url": "src/lib/images/Spider.jpg"
+    },
+    {
+        "name": "Scar Akai",
+        "image_url": "src/lib/images/Scar_Akai.jpg"
+    },
+    {
+        "name": "Mary Sera",
+        "image_url": "src/lib/images/Mary_Sera.jpg"
+    }
+]

@@ -9,6 +9,7 @@
     <div class="navigation">
       <a href="/25_Question">25 Questions</a>
       <a href="/50_Question">50 Questions</a>
+      <a href="/Conan_50_Question">50 Questions Conan</a>
     </div>
   </main>
   
