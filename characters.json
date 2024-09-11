@@ -1,0 +1,341 @@
+
+{
+  "characters": [
+    {
+      "name": "Althaitham",
+      "height_cm": 182
+    },
+    {
+      "name": "Kamisato Ayaka",
+      "height_cm": 156
+    },
+    {
+      "name": "Kamisato Ayato",
+      "height_cm": 182
+    },
+    {
+      "name": "Albedo",
+      "height_cm": 161
+    },
+    {
+      "name": "Amber",
+      "height_cm": 156
+    },
+    {
+      "name": "Arlecchino",
+      "height_cm": 168
+    },
+    {
+      "name": "Baizhu",
+      "height_cm": 182
+    },
+    {
+      "name": "Barbara",
+      "height_cm": 158
+    },
+    {
+      "name": "Beidou",
+      "height_cm": 168
+    },
+    {
+      "name": "Bennett",
+      "height_cm": 161
+    },
+    {
+      "name": "Candace",
+      "height_cm": 168
+    },
+    {
+      "name": "Charlotte",
+      "height_cm": 158
+    },
+    {
+      "name": "Chevreuse",
+      "height_cm": 168
+    },
+    {
+      "name": "Chiori",
+      "height_cm": 161
+    },
+    {
+      "name": "Clorinde",
+      "height_cm": 168
+    },
+    {
+      "name": "Chongyun",
+      "height_cm": 161
+    },
+    {
+      "name": "Collei",
+      "height_cm": 159
+    },
+    {
+      "name": "Cyno",
+      "height_cm": 161
+    },
+    {
+      "name": "Dehya",
+      "height_cm": 168
+    },
+    {
+      "name": "Diluc",
+      "height_cm": 180
+    },
+    {
+      "name": "Diona",
+      "height_cm": 140
+    },
+    {
+      "name": "Dori",
+      "height_cm": 138
+    },
+    {
+      "name": "Emilie",
+      "height_cm": 161
+    },
+    {
+      "name": "Eula",
+      "height_cm": 166
+    },
+    {
+      "name": "Faruzan",
+      "height_cm": 158
+    },
+    {
+      "name": "Fischl",
+      "height_cm": 158
+    },
+    {
+      "name": "Freminet",
+      "height_cm": 168
+    },
+    {
+      "name": "Furina",
+      "height_cm": 166
+    },
+    {
+      "name": "Ganyu",
+      "height_cm": 156
+    },
+    {
+      "name": "Gorou",
+      "height_cm": 161
+    },
+    {
+      "name": "Shikanoin Heizou",
+      "height_cm": 166
+    },
+    {
+      "name": "Hu Tao",
+      "height_cm": 156
+    },
+    {
+      "name": "Arataki Itto",
+      "height_cm": 182
+    },
+    {
+      "name": "Jean",
+      "height_cm": 168
+    },
+    {
+      "name": "Kaedehara Kazuha",
+      "height_cm": 161
+    },
+    {
+      "name": "Kaeya",
+      "height_cm": 182
+    },
+    {
+      "name": "Kaveh",
+      "height_cm": 182
+    },
+    {
+      "name": "Keqing",
+      "height_cm": 158
+    },
+    {
+      "name": "Kirara",
+      "height_cm": 158
+    },
+    {
+      "name": "Klee",
+      "height_cm": 135
+    },
+    {
+      "name": "Kujou Sara",
+      "height_cm": 168
+    },
+    {
+      "name": "Kuki Shinobu",
+      "height_cm": 161
+    },
+    {
+      "name": "Layla",
+      "height_cm": 158
+    },
+    {
+      "name": "Lisa",
+      "height_cm": 166
+    },
+    {
+      "name": "Lynette",
+      "height_cm": 158
+    },
+    {
+      "name": "Lyney",
+      "height_cm": 168
+    },
+    {
+      "name": "Mika Schmidt",
+      "height_cm": 168
+    },
+    {
+      "name": "Mona",
+      "height_cm": 158
+    },
+    {
+      "name": "Mualani",
+      "height_cm": 161
+    },
+    {
+      "name": "Nahida",
+      "height_cm": 138
+    },
+    {
+      "name": "Navia",
+      "height_cm": 168
+    },
+    {
+      "name": "Neuvillette",
+      "height_cm": 182
+    },
+    {
+      "name": "Nilou",
+      "height_cm": 161
+    },
+    {
+      "name": "Ningguang",
+      "height_cm": 168
+    },
+    {
+      "name": "Noelle",
+      "height_cm": 158
+    },
+    {
+      "name": "Qiqi",
+      "height_cm": 133
+    },
+    {
+      "name": "Raiden Shogun",
+      "height_cm": 166
+    },
+    {
+      "name": "Razor",
+      "height_cm": 164
+    },
+    {
+      "name": "Rosaria",
+      "height_cm": 168
+    },
+    {
+      "name": "Sangonomiya Kokomi",
+      "height_cm": 161
+    },
+    {
+      "name": "Sayu",
+      "height_cm": 138
+    },
+    {
+      "name": "Sethos",
+      "height_cm": 166
+    },
+    {
+      "name": "Shenhe",
+      "height_cm": 166
+    },
+    {
+      "name": "Sigewinne",
+      "height_cm": 138
+    },
+    {
+      "name": "Sucrose",
+      "height_cm": 156
+    },
+    {
+      "name": "Tartaglia (Childe)",
+      "height_cm": 182
+    },
+    {
+      "name": "Thoma",
+      "height_cm": 182
+    },
+    {
+      "name": "Tighnari",
+      "height_cm": 161
+    },
+    {
+      "name": "Traveler (Aether)",
+      "height_cm": 164
+    },
+    {
+      "name": "Traveler (Lumine)",
+      "height_cm": 158
+    },
+    {
+      "name": "Venti",
+      "height_cm": 161
+    },
+    {
+      "name": "Wanderer (Scaramouche)",
+      "height_cm": 161
+    },
+    {
+      "name": "Wriothesley",
+      "height_cm": 182
+    },
+    {
+      "name": "Xiangling",
+      "height_cm": 158
+    },
+    {
+      "name": "Xiao",
+      "height_cm": 158
+    },
+    {
+      "name": "Xingqiu",
+      "height_cm": 166
+    },
+    {
+      "name": "Xinyan",
+      "height_cm": 158
+    },
+    {
+      "name": "Yaoyao",
+      "height_cm": 138
+    },
+    {
+      "name": "Yae Miko",
+      "height_cm": 166
+    },
+    {
+      "name": "Yanfei",
+      "height_cm": 158
+    },
+    {
+      "name": "Yelan",
+      "height_cm": 166
+    },
+    {
+      "name": "Yoimiya",
+      "height_cm": 161
+    },
+    {
+      "name": "Yun Jin",
+      "height_cm": 158
+    },
+    {
+      "name": "Zhongli",
+      "height_cm": 182
+    }
+  ]
+}
